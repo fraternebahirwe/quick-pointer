@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sniper Game</title>
-  <link rel="stylesheet" href="style.css">
-   <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Sniper Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <div class="hud">
-    <h2>🎯 Score : <span id="score">0</span></h2>
-    <h2>⏱ Temps : <span id="time">30</span></h2>
-  </div>
+    <main class="container">
 
-  <div id="gameArea">
-    <div id="target"></div>
-  </div>
+        <!-- Header -->
+        <header class="game-header">
+            <h1>🎯 Sniper Challenge</h1>
+            <p>Hit as many targets as possible before time runs out!</p>
+        </header>
 
-  <button onclick="startGame()">Start Game</button>
+        <!-- HUD -->
+        <section class="hud">
 
- 
+            <div class="card">
+                <span class="label">Score</span>
+                <span id="score">0</span>
+            </div>
+
+            <div class="card">
+                <span class="label">Time Left</span>
+                <span id="time">30</span>s
+            </div>
+
+        </section>
+
+        <!-- Game Area -->
+        <section id="gameArea" aria-label="Game Area">
+            <div id="target" title="Shoot me!"></div>
+        </section>
+
+        <!-- Controls -->
+        <section class="controls">
+            <button id="startBtn" onclick="startGame()">
+                ▶ Start Game
+            </button>
+        </section>
+
+        <!-- End Message -->
+        <section class="result">
+            <h2 id="message"></h2>
+        </section>
+
+    </main>
+
 </body>
 </html>
